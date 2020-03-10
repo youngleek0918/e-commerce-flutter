@@ -43,43 +43,7 @@ class _ProductsState extends State<Products> {
       "picture": "images/products/heel_product.png",
       "old_price": 100,
       "price": 50,
-    },
-    {
-      "name": "Hoodie",
-      "picture": "images/products/hoodie_product.png",
-      "old_price": 100,
-      "price": 50,
-    },
-    {
-      "name": "Jean",
-      "picture": "images/products/jean_product.png",
-      "old_price": 100,
-      "price": 50,
-    },
-    {
-      "name": "Skirt",
-      "picture": "images/products/skirt_product.png",
-      "old_price": 100,
-      "price": 50,
-    },
-    {
-      "name": "T-Shirt",
-      "picture": "images/products/tshirt_product.png",
-      "old_price": 100,
-      "price": 50,
-    },
-    {
-      "name": "Ring",
-      "picture": "images/products/ring_product.png",
-      "old_price": 120,
-      "price": 85,
-    },
-    {
-      "name": "Heel",
-      "picture": "images/products/heel_product.png",
-      "old_price": 100,
-      "price": 50,
-    },
+    }
   ];
 
   @override
@@ -119,7 +83,9 @@ class SingleProduct extends StatelessWidget {
           tag: productName,
           child: Material(
             child: InkWell(
-              onTap: () {},
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => ProductDetails()),
+              ),
               child: GridTile(
                   footer: Container(
                     color: Colors.white70,

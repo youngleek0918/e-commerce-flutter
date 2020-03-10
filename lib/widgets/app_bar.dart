@@ -7,7 +7,9 @@ Widget appbarwidget() => AppBar(
       title: Text('Online Shopping Mall'),
       actions: <Widget>[
         IconButton(
-            icon: Icon(Icons.search), color: Colors.white, onPressed: () {}),
+            icon: Icon(Icons.search),
+            color: Colors.white, 
+            onPressed: () {}),
         IconButton(
             icon: Icon(Icons.shopping_cart),
             color: Colors.white,
