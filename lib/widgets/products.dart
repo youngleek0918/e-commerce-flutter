@@ -61,7 +61,7 @@ class _ProductsState extends State<Products> {
           );
         });
   }
-}
+} 
 
 class SingleProduct extends StatelessWidget {
   final productName;

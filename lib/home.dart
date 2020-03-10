@@ -1,4 +1,3 @@
-import 'package:e_commerce_flutter/widgets/app_bar.dart';
 import 'package:e_commerce_flutter/widgets/drawer.dart';
 import 'package:e_commerce_flutter/widgets/horizontal_list.dart';
 import 'package:e_commerce_flutter/widgets/image_carousel.dart';
@@ -14,7 +13,22 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appbarwidget(),
+      appBar: AppBar(
+        elevation: 0.1,
+        backgroundColor: Colors.red[400],
+        title: InkWell(
+          onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage()));},
+          child: Text('Online Shopping Mall'),
+        ),
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(Icons.search), color: Colors.white, onPressed: () {}),
+          IconButton(
+              icon: Icon(Icons.shopping_cart),
+              color: Colors.white,
+              onPressed: () {})
+        ],
+      ),
       drawer: drawer(),
       body: ListView(children: <Widget>[
         //image carousel
