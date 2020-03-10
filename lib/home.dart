@@ -2,6 +2,7 @@ import 'package:e_commerce_flutter/widgets/app_bar.dart';
 import 'package:e_commerce_flutter/widgets/drawer.dart';
 import 'package:e_commerce_flutter/widgets/horizontal_list.dart';
 import 'package:e_commerce_flutter/widgets/image_carousel.dart';
+import 'package:e_commerce_flutter/widgets/products.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -27,6 +28,20 @@ class _HomePageState extends State<HomePage> {
 
         //Horizontal list view
         HorizontalList(),
+
+        //padding widget
+        Padding(
+          padding: EdgeInsets.all(20.0),
+          child: Text('Recent products'),
+        ),
+
+        //Product list
+        Container(
+          height: 400.0,
+          child: Products(),
+        ),
+      
+      
       ]),
     );
   }
